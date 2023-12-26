@@ -1,4 +1,71 @@
-<h1>{{title}}</h1>
-<p>child-a works!</p>
+<!-- <h1>{{title}}</h1>
 <app-grand-child-a [fromParent]="currentItem"></app-grand-child-a>
 <p>end of child-a</p>
+ -->
+<!-- <div class="container">
+  <div>
+    <label for="userInput">Enter text:</label>
+    <input type="text" id="userInput" [(ngModel)]="userInput" />
+    <button (click)="addItem()">Add Item</button>
+  </div>
+  <div class="container">
+      <div *ngFor="let item of itemList; let i = index">
+          <p>
+            Item {{ i + 1 }}: {{ item }}
+            <button (click)="removeItem(i)">Remove</button>
+          </p>
+        </div>
+  </div>
+</div> -->
+
+<section class="vh-100" style="background-color: #eee;">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col col-lg-9 col-xl-7">
+        <div class="card rounded-3">
+          <div class="card-body p-4">
+
+            <h4 class="text-center my-3 pb-3">To Do App</h4>
+
+            <div class="row row-cols-lg-auto g-3 justify-content-center align-items-center mb-4 pb-2">
+              <div class="col-12">
+                <div class="form-group">
+                  <input type="text" id="userInput" class="form-control" [(ngModel)]="userInput"/>
+                  <label class="form-label" for="userInput">Item</label>
+                </div>
+              </div>
+
+              <div class="col-12">
+                <button type="submit" class="btn btn-primary" (click)="addItem()">Add</button>
+              </div>
+
+              <!-- <div class="col-12">
+                <button type="submit" class="btn btn-warning">Get tasks</button>
+              </div> -->
+            </div>
+
+            <table class="table mb-4">
+              <thead>
+                <tr>
+                  <th scope="col">No.</th>
+                  <th scope="col">Todo item</th>
+                  <th scope="col">Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let item of itemList; let i = index">
+                  <th scope="row">{{ i + 1 }}</th>
+                  <td>{{ item }}</td>
+                  <td>
+                    <button type="submit" class="btn btn-danger" (click)="removeItem(i)">Remove</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
