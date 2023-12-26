@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-grand-child-a',
@@ -8,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrl: './grand-child-a.component.css'
 })
 export class GrandChildAComponent {
+  @Input() fromParent ='' ; 
 
 }

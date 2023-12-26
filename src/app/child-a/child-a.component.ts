@@ -10,4 +10,5 @@ import { GrandChildAComponent } from '../grand-child-a/grand-child-a.component';
 })
 export class ChildAComponent {
 title="this is ChildA component"
+currentItem="this is from ChildA"
 }
