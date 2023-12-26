@@ -14,10 +14,10 @@ export class ChildAComponent {
 title="List of items"
 // parent to child
 currentItem="this is from ChildA"
-// child to parent : receiving an item 
-userInput: string = '';
-itemList: string[] = ["hello","world","x"];
+itemList: string[] = ["hello","world"];
 
+// new item comes from the parent component itself
+userInput: string = '';
 addItem() {
   if (this.userInput.trim() !== '') {
     this.itemList.push(this.userInput);
@@ -29,6 +29,11 @@ addItem() {
 
 removeItem(index: number) {
   this.itemList.splice(index, 1);
+}
+
+// new item comes from the child component using @output property
+addItemFromChild(newItem: string) {
+  this.itemList.push(newItem);
 }
 
 }

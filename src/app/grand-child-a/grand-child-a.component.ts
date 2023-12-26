@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-grand-child-a',
@@ -9,5 +9,9 @@ import { Component, Input } from '@angular/core';
 })
 export class GrandChildAComponent {
   @Input() fromParent ='' ; 
+  @Output() newItemEvent = new EventEmitter<string>();
 
+  addNewItem(value: string) {
+    this.newItemEvent.emit(value);
+  }
 }
