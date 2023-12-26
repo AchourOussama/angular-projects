@@ -8,5 +8,10 @@ import "bootstrap/dist/css/bootstrap.css"
   styleUrl: './emoji.component.css'
 })
 export class EmojiComponent {
-
+Title= "Oussama"
+status=true
+changeStatus(){
+  console.log("hello")
+  this.status=!(this.status)
+}
 }
